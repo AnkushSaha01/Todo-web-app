@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: rgb(38, 38, 38);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.container .screen {
+  position: absolute;
+  width: 100%;
+  max-width: 450px;
+  height: 70vh;
+  background-color: #131313;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 80px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.518);
+}
+
+.screen h1 {
+  color: #fff;
+  margin: 10% auto 10% 15%;
+  font-weight: 500;
+}
+
+.addTodo {
+  background-color: rgb(56, 56, 56);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 15px 30px; */
+  width: 75%;
+  border-radius: 50px;
+  margin-left: 50px;
+}
+
+.addTodo input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+.addTodo button {
+  border: none;
+  outline: none;
+  background: black;
+  color: #fff;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.addTodo button:hover {
+  background: rgb(45, 45, 45);
+  box-shadow: -2px 5px 4px rgba(0, 0, 0, 0.635);
+}
+
+#todoLists {
+  color: #fff;
+  list-style-type: none;
+  padding: 40px 70px 40px 50px;
+}
+
+ul li {
+  position: relative;
+  padding: 12px 50px 12px 50px;
+  font-size: 20px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  background-image: url(unchecked.png);
+  border-radius: 50%;
+  top: 18px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #a0a0a0;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(correct.png);
+}
+
+ul li span {
+  position: absolute;
+  color: red;
+  right: 0;
+  font-size: 28px;
+  padding: 2px 14px;
+  text-align: center;
+}
+
+ul li span:hover {
+  background-color: rgba(255, 37, 37, 0.819);
+  color: black;
+  border-radius: 70%;
+}
+
+/* .todoLists li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between; 
+  }/*
+
+/*.ri-close-line {
+  position: absolute;
+  color: red;
+  right: 0;
+  padding: 10px;
+}
+.ri-close-line:hover {
+  background-color: red;
+  color: black;
+  border-radius: 50%;
+} */
